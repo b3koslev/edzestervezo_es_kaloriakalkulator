@@ -69,6 +69,15 @@ namespace edzestervezo_es_kaloriakalkulator
             }
 
             double totalCaloriesBurned = weight * totalWorkoutTime * calorieMultiplier;
+
+            Console.WriteLine();
+            Console.WriteLine("Összegzés: ");
+            Console.WriteLine();
+
+            Console.WriteLine($"\n{lastName} {firstName} edzésterv:");
+            Console.WriteLine($"Edzés célja: {goal}");
+            Console.WriteLine($"Teljes heti edzésidő: {totalWorkoutTime}");
+            Console.WriteLine($"Összes elégetett kalória: {totalCaloriesBurned}");
         }
     }
 }
