@@ -61,7 +61,6 @@ namespace edzestervezo_es_kaloriakalkulator
 
             Console.Write("Hány napot szeretnél edzeni?: ");
             int workoutDays = Convert.ToInt32(Console.ReadLine());
-
             double totalWorkoutTime = 0;
 
             for (int i = 0; i < workoutDays; i++)
