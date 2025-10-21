@@ -11,11 +11,36 @@ namespace edzestervezo_es_kaloriakalkulator
     {
         static void Main(string[] args)
         {
-            Console.Write("Név: ");
-            string[] name = Console.ReadLine().Split(' ');
-            string lastName = name[0];
-            string firstName = name[1];
+            string name = string.Empty;
+            bool toName = false;
+            int space_num = 0;
+            bool space = false;
             double weight;
+            
+            while (true)
+            {
+                Console.Write("Név: ");
+                name = Console.ReadLine();
+                for (int i = 0; i < name.Length; i++)
+                {
+                    space_num = name.IndexOf(' ', 0);
+                    if (space_num > 0)
+                    {
+                        space = true;
+                    }
+                }
+                if (char.IsUpper(name[0]) && space && char.IsUpper(name[space_num + 1]))
+                {
+                    toName = true;
+                    break;
+                }
+                else 
+                { 
+                    space = false;
+                    Console.WriteLine("Hibás névformátum!");
+                }
+            }
+            
             while (true)
             {
                 Console.Write("Add meg a testsúlyodat (kg) [50-120]: ");
